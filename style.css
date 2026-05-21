@@ -1,0 +1,111 @@
+:root {
+  --bg: #f7f9fc;
+  --card: #ffffff;
+  --text: #1c2430;
+  --muted: #5e6b7a;
+  --primary: #003b5c;
+  --accent: #00a6b4;
+  --line: #d9e2ec;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+}
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.site-header {
+  background: linear-gradient(135deg, var(--primary), #0a6588);
+  color: white;
+  padding: 36px 8%;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2.15rem;
+  line-height: 1.2;
+}
+
+.site-header p {
+  margin: 10px 0 0;
+  color: #e4f5f7;
+  max-width: 900px;
+}
+
+nav {
+  background: white;
+  border-bottom: 1px solid var(--line);
+  padding: 12px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  display: inline-block;
+  margin: 6px 18px 6px 0;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+main {
+  width: min(1100px, 88%);
+  margin: 32px auto 56px;
+}
+
+.hero, .card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 20px rgba(16, 40, 70, 0.06);
+  margin-bottom: 24px;
+}
+
+.hero h2, .card h2, .card h3 { margin-top: 0; color: var(--primary); }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.pill {
+  display: inline-block;
+  background: #e6f7f8;
+  color: var(--primary);
+  border: 1px solid #bee7eb;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  margin: 4px 6px 4px 0;
+}
+
+.list-clean { padding-left: 20px; }
+.list-clean li { margin-bottom: 12px; }
+
+.pub-list li { margin-bottom: 18px; }
+.pub-title { font-weight: 700; }
+.pub-meta { color: var(--muted); }
+
+footer {
+  background: #0f2230;
+  color: #c8d5df;
+  text-align: center;
+  padding: 24px 8%;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 720px) {
+  .site-header h1 { font-size: 1.65rem; }
+  nav { position: static; }
+  nav a { display: block; margin: 8px 0; }
+  .hero, .card { padding: 22px; }
+}
